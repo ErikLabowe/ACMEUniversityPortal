@@ -1,0 +1,23 @@
+# Node / Vite Front End
+node_modules/
+frontend/dist/
+.vite/
+
+# Python / Flask Back End
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Local SQLite Database & Environment Files
+*.db
+*.sqlite
+*.sqlite3
+instance/
+.env
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/

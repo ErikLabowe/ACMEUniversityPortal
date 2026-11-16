@@ -1,0 +1,6 @@
+flask
+flask-sqlalchemy
+flask-admin
+flask-cors
+wtforms
+wtforms.validators

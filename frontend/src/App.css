@@ -1,0 +1,574 @@
+/* ==============================================================================
+   ACME UNIVERSITY — MODERN MINIMALIST THEME (REACT FRONT END)
+   ============================================================================== */
+
+:root
+{
+  --bg-canvas: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --border-hairline: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent-primary: #059669;
+  --accent-hover: #047857;
+  --accent-soft: #ecfdf5;
+  --danger-primary: #e11d48;
+  --danger-hover: #be123c;
+  --danger-soft: #fff1f2;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.07), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body
+{
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==============================================================================
+   TOP NAVIGATION BAR
+   ============================================================================== */
+.top-banner
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+  max-width: 1020px;
+  margin: 16px auto 24px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.welcome-text
+{
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.university-title
+{
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.signout-link
+{
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.signout-link:hover
+{
+  background-color: var(--danger-soft);
+  border-color: #fecdd3;
+  color: var(--danger-primary);
+}
+
+/* ==============================================================================
+   MAIN CONTAINER & TOAST NOTIFICATION
+   ============================================================================== */
+.main-container
+{
+  max-width: 1020px;
+  margin: 0 auto 48px;
+  padding: 0 16px;
+}
+
+.notification-bar
+{
+  max-width: 988px;
+  margin: 0 auto 18px;
+  padding: 12px 18px;
+  background-color: var(--accent-soft);
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==============================================================================
+   DASHBOARD CARD CONTAINER
+   ============================================================================== */
+.portal-panel
+{
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* Student Segmented Tab Bar */
+.tab-bar
+{
+  display: flex;
+  gap: 8px;
+  padding: 16px 28px;
+  background-color: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.tab-btn
+{
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text-secondary);
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover
+{
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.tab-btn.active
+{
+  background-color: var(--bg-surface);
+  color: var(--accent-primary);
+  border-color: var(--border-hairline);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Teacher & Admin Single Header */
+.single-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 28px;
+  background-color: var(--bg-subtle);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.panel-body
+{
+  padding: 28px;
+  min-height: 280px;
+}
+
+/* ==============================================================================
+   DATA TABLES
+   ============================================================================== */
+.acme-table
+{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.acme-table th
+{
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.acme-table td
+{
+  padding: 14px 16px;
+  font-size: 0.94rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-hairline);
+  transition: background-color 0.12s ease;
+}
+
+.acme-table tbody tr:last-child td
+{
+  border-bottom: none;
+}
+
+.acme-table tbody tr:hover td
+{
+  background-color: #f8fafc;
+}
+
+.empty-cell
+{
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted);
+  padding: 32px !important;
+}
+
+/* ==============================================================================
+   ADD / DROP COURSE ACTION BUTTONS
+   ============================================================================== */
+.action-cell
+{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.btn-add,
+.btn-drop
+{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-add
+{
+  background-color: var(--accent-soft);
+  color: var(--accent-primary);
+  border: 1px solid #a7f3d0;
+}
+
+.btn-add:hover
+{
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border-color: var(--accent-primary);
+}
+
+.btn-drop
+{
+  background-color: var(--danger-soft);
+  color: var(--danger-primary);
+  border: 1px solid #fecdd3;
+}
+
+.btn-drop:hover
+{
+  background-color: var(--danger-primary);
+  color: #ffffff;
+  border-color: var(--danger-primary);
+}
+
+.full-badge
+{
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  border-radius: 999px;
+}
+
+/* ==============================================================================
+   TEACHER ROSTER & GRADEBOOK CONTROLS
+   ============================================================================== */
+.course-link-btn
+{
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.course-link-btn:hover
+{
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.btn-back
+{
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-back:hover
+{
+  background-color: var(--bg-subtle);
+}
+
+.grade-input
+{
+  width: 88px;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.grade-input:focus
+{
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+.btn-save-grade
+{
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.btn-save-grade:hover
+{
+  background-color: var(--accent-hover);
+}
+
+/* ==============================================================================
+   LOGIN SCREEN
+   ============================================================================== */
+.login-page
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background: radial-gradient(circle at top, #ecfdf5 0%, var(--bg-canvas) 55%);
+}
+
+.login-card
+{
+  background-color: var(--bg-surface);
+  padding: 36px 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card h2
+{
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.form-group
+{
+  margin-bottom: 16px;
+}
+
+.form-group label
+{
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.form-group input
+{
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus
+{
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+.btn-signin
+{
+  width: 100%;
+  padding: 11px;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.15s ease;
+}
+
+.btn-signin:hover
+{
+  background-color: var(--accent-hover);
+}
+
+.error-text
+{
+  color: var(--danger-primary);
+  background-color: var(--danger-soft);
+  border: 1px solid #fecdd3;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.demo-helpers
+{
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-hairline);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.demo-buttons
+{
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.demo-buttons button
+{
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  color: var(--text-secondary);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-hairline);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.demo-buttons button:hover
+{
+  background-color: var(--accent-soft);
+  color: var(--accent-primary);
+  border-color: #a7f3d0;
+}
+
+/* ==============================================================================
+   ADMIN LAUNCH PANEL
+   ============================================================================== */
+.admin-box
+{
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.admin-box p
+{
+  margin-bottom: 24px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-admin-launch
+{
+  display: inline-block;
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  padding: 11px 22px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.15s ease;
+}
+
+.btn-admin-launch:hover
+{
+  background-color: var(--accent-hover);
+}
+
+/* ==============================================================================
+   STUDENT GRADE BADGE
+   ============================================================================== */
+.grade-badge
+{
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  background-color: var(--accent-soft);
+  border: 1px solid #a7f3d0;
+  border-radius: 999px;
+}
